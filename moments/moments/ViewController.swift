@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        FetchService().fetchData(url: "https://emagrorrim.github.io/mock-api/moments.json"){ (tweets: [Tweet]) in
+            print(tweets)
+        }
     }
 
 
