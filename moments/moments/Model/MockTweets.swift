@@ -10,11 +10,21 @@ import Foundation
 
 let mockTweets = [
     Tweet(
-      content: "沙发！"
+      content: "沙发！",
+      sender: TweetSender(
+          username: "xinguo",
+          nick: "Xin Guo",
+          avatar: "https://thoughtworks-mobile-2018.herokuapp.com/images/user/avatar/001.jpeg"
+      )
     ),
     Tweet(
-      content: "Test Test！"
-    ),
+      content: "Test Test！",
+      sender: TweetSender(
+          username: "yanzi",
+          nick: "Yanzi Li",
+          avatar: "https://thoughtworks-mobile-2018.herokuapp.com/images/user/avatar/008.jpeg"
+      )
+    )
 ]
 
 

@@ -7,22 +7,28 @@
 //
 
 import Foundation
+import UIKit
 
-public struct Tweet: Decodable {
+ public struct Tweet: Decodable {
     var content: String
+    var sender: TweetSender
+ }
+
+// public struct Tweet: Decodable {
+//    var content: String?
 //    var images: [TweetImage]?
-//    var sender: [TweetSender]?
+//    var sender: TweetSender?
 //    var comments: [TweetComment]?
-}
+// }
 
 public struct TweetImage: Codable {
     var url: String
 }
 
 public struct TweetSender: Codable {
-    var avatar: String
-    var nick: String
     var username: String
+    var nick: String
+    var avatar: String
 }
 
 public struct TweetComment: Codable {

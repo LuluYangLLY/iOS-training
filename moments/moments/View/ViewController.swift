@@ -21,7 +21,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.tableView.dataSource = self
-        
+        self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+       
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 300
+        tableView.rowHeight = 300
+
         self.fetchData()
 
     }
@@ -53,7 +58,11 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Get back the cell using the reuseIdentifier
         // UITableView will create a new cell or reuse an existing cell
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as? TableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: allTweets![indexPath.row])
+        return cell
     }
     
     private func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
