@@ -25,7 +25,7 @@ class ViewController: UIViewController {
        
 //        tableView.rowHeight = UITableView.automaticDimension
 //        tableView.estimatedRowHeight = 300
-        tableView.rowHeight = 300
+        tableView.rowHeight = 500
 
         self.fetchData()
 

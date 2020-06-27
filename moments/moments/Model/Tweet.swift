@@ -13,6 +13,7 @@ import UIKit
     var content: String
     var sender: TweetSender
     var images: [TweetImage]
+    var comments: [TweetComment]
  }
 
 // public struct Tweet: Decodable {

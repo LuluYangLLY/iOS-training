@@ -21,6 +21,16 @@ let mockTweets = [
         TweetImage(url: "https://thoughtworks-mobile-2018.herokuapp.com/images/tweets/008.jpeg"),
         TweetImage(url: "https://thoughtworks-mobile-2018.herokuapp.com/images/tweets/009.jpeg"),
         TweetImage(url: "https://thoughtworks-mobile-2018.herokuapp.com/images/tweets/010.jpeg"),
+      ],
+      comments: [
+        TweetComment(
+            content: "Good.Good.Good.Good.Good.Good.Good.Good.Good.Good.Good.⏰",
+            sender: TweetSender(
+                username: "yanzi",
+                nick: "Yanzi Li",
+                avatar: "https://thoughtworks-mobile-2018.herokuapp.com/images/user/avatar/008.jpeg"
+            )
+        )
       ]
     ),
     Tweet(
@@ -32,6 +42,24 @@ let mockTweets = [
       ),
       images: [
         TweetImage(url: "https://thoughtworks-mobile-2018.herokuapp.com/images/tweets/001.jpeg")
+      ],
+      comments: [
+        TweetComment(
+            content: "Like it too",
+            sender: TweetSender(
+                username: "xinguo",
+                nick: "Xin Guo",
+                avatar: "https://thoughtworks-mobile-2018.herokuapp.com/images/user/avatar/001.jpeg"
+            )
+        ),
+        TweetComment(
+            content: "Good!",
+            sender: TweetSender(
+                username: "yanzi",
+                nick: "Yanzi Li",
+                avatar: "https://thoughtworks-mobile-2018.herokuapp.com/images/user/avatar/008.jpeg"
+            )
+        )
       ]
     )
 ]

@@ -13,9 +13,12 @@ class TableViewCell: UITableViewCell {
     @IBOutlet var nickLabel: UILabel!
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var tweetImageColloction: UICollectionView!
+    @IBOutlet var tweetCommentLabel: UILabel!
     
     var tweetImages: [TweetImage]!
     var collectionviewFlowLayout: UICollectionViewFlowLayout!
+    
+    var tweet: Tweet!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +27,9 @@ class TableViewCell: UITableViewCell {
     
     func configure(with tweet: Tweet) {
         self.tweetImageColloction.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
+        
+        self.tweet = tweet
+        
         do {
             let avatarUrl = URL(string:tweet.sender.avatar)!
             let data = try Data(contentsOf: avatarUrl)
@@ -38,7 +44,21 @@ class TableViewCell: UITableViewCell {
         self.contentLabel.numberOfLines = 0
         self.tweetImages = tweet.images
         
+        self.tweetCommentLabel.text = self.formatComment()
+        self.tweetCommentLabel.numberOfLines = 0
+        
         self.setUpCollectionViewItemSize()
+    }
+    
+    private func formatComment() -> String {
+        guard let comments = self.tweet?.comments else { return "" }
+        
+        var commentStr = "";
+        comments.forEach { comment in
+            commentStr.append(" \(comment.sender.nick):  \(comment.content)\n")
+        }
+        
+        return commentStr
     }
     
     private func setUpCollectionViewItemSize(){
