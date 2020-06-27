@@ -8,24 +8,24 @@
 
 import Foundation
 
-struct Tweet: Decodable {
-    var content: String?
-    var images: [TweetImage]?
-    var sender: [TweetSender]?
-    var comments: [TweetComment]?
+public struct Tweet: Decodable {
+    var content: String
+//    var images: [TweetImage]?
+//    var sender: [TweetSender]?
+//    var comments: [TweetComment]?
 }
 
-struct TweetImage: Decodable {
+public struct TweetImage: Codable {
     var url: String
 }
 
-struct TweetSender: Decodable {
+public struct TweetSender: Codable {
     var avatar: String
     var nick: String
     var username: String
 }
 
-struct TweetComment: Decodable {
+public struct TweetComment: Codable {
     var content: String
     var sender: TweetSender
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Profile {
+struct Profile: Decodable {
     var profileImage: String;
     var avatar: String;
     var nick: String;

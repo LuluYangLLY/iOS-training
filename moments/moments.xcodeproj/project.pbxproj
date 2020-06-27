@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00031C4324A6DC9A00DF5203 /* MockTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00031C4224A6DC9A00DF5203 /* MockTweets.swift */; };
+		00031C4424A6DC9A00DF5203 /* MockTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00031C4224A6DC9A00DF5203 /* MockTweets.swift */; };
 		00CDD1E224A0EEE0003F4FF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD1E124A0EEE0003F4FF6 /* AppDelegate.swift */; };
 		00CDD1E424A0EEE0003F4FF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD1E324A0EEE0003F4FF6 /* SceneDelegate.swift */; };
 		00CDD1E624A0EEE0003F4FF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD1E524A0EEE0003F4FF6 /* ViewController.swift */; };
@@ -20,6 +22,10 @@
 		00CDD21524A47B62003F4FF6 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD21324A47B62003F4FF6 /* Tweet.swift */; };
 		00CDD21724A59845003F4FF6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD21624A59845003F4FF6 /* Profile.swift */; };
 		00CDD21824A59845003F4FF6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD21624A59845003F4FF6 /* Profile.swift */; };
+		00CDD21C24A5D916003F4FF6 /* MomentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD21B24A5D916003F4FF6 /* MomentsViewModel.swift */; };
+		00CDD21D24A5D916003F4FF6 /* MomentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD21B24A5D916003F4FF6 /* MomentsViewModel.swift */; };
+		00CDD22224A5E524003F4FF6 /* TableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD22124A5E524003F4FF6 /* TableHeader.swift */; };
+		00CDD22324A5E524003F4FF6 /* TableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDD22124A5E524003F4FF6 /* TableHeader.swift */; };
 		0DA9C5BFCE831D1FB2F77A30 /* Pods_moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0824BB527DCE8B78FB20CFC /* Pods_moments.framework */; };
 		0F34DD7E28ED9962B78C34E6 /* Pods_momentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE1CAD4FEEB025A9B8FBBB7 /* Pods_momentsTests.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00031C4224A6DC9A00DF5203 /* MockTweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTweets.swift; sourceTree = "<group>"; };
 		00CDD1DE24A0EEE0003F4FF6 /* moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CDD1E124A0EEE0003F4FF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00CDD1E324A0EEE0003F4FF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +56,8 @@
 		00CDD20C24A47488003F4FF6 /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		00CDD21324A47B62003F4FF6 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		00CDD21624A59845003F4FF6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		00CDD21B24A5D916003F4FF6 /* MomentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsViewModel.swift; sourceTree = "<group>"; };
+		00CDD22124A5E524003F4FF6 /* TableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeader.swift; sourceTree = "<group>"; };
 		023067E6FB95B251DDDF9BBF /* Pods-momentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momentsTests.release.xcconfig"; path = "Target Support Files/Pods-momentsTests/Pods-momentsTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C9F66F9D88922D524BBCB01 /* Pods-moments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moments.debug.xcconfig"; path = "Target Support Files/Pods-moments/Pods-moments.debug.xcconfig"; sourceTree = "<group>"; };
 		864F33AE50402E5849285390 /* Pods-momentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momentsTests.debug.xcconfig"; path = "Target Support Files/Pods-momentsTests/Pods-momentsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,11 +109,12 @@
 		00CDD1E024A0EEE0003F4FF6 /* moments */ = {
 			isa = PBXGroup;
 			children = (
+				00CDD21A24A5D8EB003F4FF6 /* ViewModel */,
+				00CDD21924A5B9E0003F4FF6 /* View */,
 				00CDD20F24A47B19003F4FF6 /* Model */,
 				00CDD20B24A460D4003F4FF6 /* Networking */,
 				00CDD1E124A0EEE0003F4FF6 /* AppDelegate.swift */,
 				00CDD1E324A0EEE0003F4FF6 /* SceneDelegate.swift */,
-				00CDD1E524A0EEE0003F4FF6 /* ViewController.swift */,
 				00CDD1E724A0EEE0003F4FF6 /* Main.storyboard */,
 				00CDD1EA24A0EEE3003F4FF6 /* Assets.xcassets */,
 				00CDD1EC24A0EEE3003F4FF6 /* LaunchScreen.storyboard */,
@@ -135,8 +145,26 @@
 			children = (
 				00CDD21324A47B62003F4FF6 /* Tweet.swift */,
 				00CDD21624A59845003F4FF6 /* Profile.swift */,
+				00031C4224A6DC9A00DF5203 /* MockTweets.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		00CDD21924A5B9E0003F4FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00CDD1E524A0EEE0003F4FF6 /* ViewController.swift */,
+				00CDD22124A5E524003F4FF6 /* TableHeader.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00CDD21A24A5D8EB003F4FF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00CDD21B24A5D916003F4FF6 /* MomentsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B3BA330E9CDEFC448DB9D5E9 /* Frameworks */ = {
@@ -346,10 +374,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CDD20D24A47488003F4FF6 /* FetchService.swift in Sources */,
+				00CDD21C24A5D916003F4FF6 /* MomentsViewModel.swift in Sources */,
 				00CDD21724A59845003F4FF6 /* Profile.swift in Sources */,
 				00CDD21424A47B62003F4FF6 /* Tweet.swift in Sources */,
 				00CDD1E624A0EEE0003F4FF6 /* ViewController.swift in Sources */,
+				00CDD22224A5E524003F4FF6 /* TableHeader.swift in Sources */,
 				00CDD1E224A0EEE0003F4FF6 /* AppDelegate.swift in Sources */,
+				00031C4324A6DC9A00DF5203 /* MockTweets.swift in Sources */,
 				00CDD1E424A0EEE0003F4FF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +392,10 @@
 				00CDD21524A47B62003F4FF6 /* Tweet.swift in Sources */,
 				00CDD21824A59845003F4FF6 /* Profile.swift in Sources */,
 				00CDD20E24A47488003F4FF6 /* FetchService.swift in Sources */,
+				00031C4424A6DC9A00DF5203 /* MockTweets.swift in Sources */,
 				00CDD1F924A0EEE3003F4FF6 /* momentsTests.swift in Sources */,
+				00CDD21D24A5D916003F4FF6 /* MomentsViewModel.swift in Sources */,
+				00CDD22324A5E524003F4FF6 /* TableHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
