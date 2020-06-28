@@ -29,21 +29,21 @@ class TableViewCell: UITableViewCell {
         self.tweetImageColloction.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         
         self.tweet = tweet
-        
+
         do {
-            let avatarUrl = URL(string:tweet.sender.avatar)!
+            let avatarUrl = URL(string: tweet.sender?.avatar ?? "")!
             let data = try Data(contentsOf: avatarUrl)
             self.avatarImage.image = UIImage(data: data)
         }
-        catch{
+        catch {
             print(error)
         }
         
-        self.nickLabel.text = tweet.sender.nick
+        self.nickLabel.text = tweet.sender?.nick
         self.contentLabel.text = tweet.content
         self.contentLabel.numberOfLines = 0
         self.tweetImages = tweet.images
-        
+
         self.tweetCommentLabel.text = self.formatComment()
         self.tweetCommentLabel.numberOfLines = 0
         
@@ -85,7 +85,7 @@ class TableViewCell: UITableViewCell {
 
 extension TableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.tweetImages.count
+        return self.tweetImages?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

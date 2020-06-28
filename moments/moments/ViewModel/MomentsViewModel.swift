@@ -16,17 +16,16 @@ class MomentsViewModel {
     var allTweets: [Tweet] = []
         
     func fetchProfile(){
-        fetchService.fetchData(url: "https://emagrorrim.github.io/mock-api/user/jsmith.json"){ (profile: Profile ) in
+        fetchService.fetch(url: "https://emagrorrim.github.io/mock-api/user/jsmith.json"){ (profile: Profile ) in
             self.didUpdateProfile!(profile)
         }
     }
     
     func fetchMomonts(){
-//        fetchService.fetchData(url: "https://emagrorrim.github.io/mock-api/moments.json"){ (tweets: [Tweet] ) in
-//            self.didUpdateMomonts!(tweets)
-//        }
-        print(mockTweets)
-        self.didUpdateMomonts!(mockTweets)
+        fetchService.fetch(url: "https://emagrorrim.github.io/mock-api/moments.json"){ (tweets: [Tweet] ) in
+            let filterTweets = tweets.filter { $0.sender != nil }
+            self.didUpdateMomonts!(filterTweets)
+        }
     }
     
 }

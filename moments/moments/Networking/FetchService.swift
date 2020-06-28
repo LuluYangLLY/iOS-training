@@ -22,34 +22,34 @@ class FetchService {
     }
     
     
-    private lazy var decoder: JSONDecoder = JSONDecoder()
-    
-    public func fetchData<T: Decodable>(url: String, completion: @escaping (T) -> Void) {
-        AF.request(url)
-            .validate(statusCode: [200])
-            .responseData { response in
-                switch response.result {
-                case let .success(data):
-                    guard let decoderesult: T = self.decode(of: data) else {return}
-                    
-                    DispatchQueue.main.async {
-                        completion(decoderesult)
-                    }
-                case let .failure(error):
-                    debugPrint(error)
-                }
-        }
-    }
-    
-    private func decode<T: Decodable>(of data: Data) -> T? {
-        var defaultResult:T? = nil
-        
-        do {
-            defaultResult = try decoder.decode(T.self, from: data)
-        } catch let ex {
-            debugPrint(ex)
-        }
-        
-        return defaultResult
-    }
+//    private lazy var decoder: JSONDecoder = JSONDecoder()
+//
+//    public func fetchData<T: Decodable>(url: String, completion: @escaping (T) -> Void) {
+//        AF.request(url)
+//            .validate(statusCode: [200])
+//            .responseData { response in
+//                switch response.result {
+//                case let .success(data):
+//                    guard let decoderesult: T = self.decode(of: data) else {return}
+//
+//                    DispatchQueue.main.async {
+//                        completion(decoderesult)
+//                    }
+//                case let .failure(error):
+//                    debugPrint(error)
+//                }
+//        }
+//    }
+//
+//    private func decode<T: Decodable>(of data: Data) -> T? {
+//        var defaultResult:T? = nil
+//
+//        do {
+//            defaultResult = try decoder.decode(T.self, from: data)
+//        } catch let ex {
+//            debugPrint(ex)
+//        }
+//
+//        return defaultResult
+//    }
 }

@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
  public struct Tweet: Decodable {
-    var content: String
-    var sender: TweetSender
-    var images: [TweetImage]
-    var comments: [TweetComment]
+    var content: String?
+    var sender: TweetSender?
+    var images: [TweetImage]?
+    var comments: [TweetComment]?
  }
 
 // public struct Tweet: Decodable {

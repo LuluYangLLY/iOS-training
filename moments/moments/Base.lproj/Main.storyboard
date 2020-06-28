@@ -18,47 +18,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R0a-UF-658">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="0yB-hE-8IF" customClass="TableHeader" customModule="moments" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n4v-31-f6B">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
-                                        </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XfE-1C-g7F">
-                                            <rect key="frame" x="284" y="164" width="100" height="100"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="Uw6-Ep-1fe"/>
-                                                <constraint firstAttribute="height" constant="100" id="rzJ-7C-2G2"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-Su-N0M">
-                                            <rect key="frame" x="222" y="214" width="42" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="m8S-7M-5Wn"/>
-                                                <constraint firstAttribute="width" constant="50" id="u5S-FF-G3s"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="3a1-Su-N0M" secondAttribute="bottom" constant="20" id="OXe-Jr-8Il"/>
-                                        <constraint firstAttribute="bottom" secondItem="XfE-1C-g7F" secondAttribute="bottom" id="OvW-6M-BCQ"/>
-                                        <constraint firstItem="n4v-31-f6B" firstAttribute="top" secondItem="0yB-hE-8IF" secondAttribute="top" id="Yn5-if-XX4"/>
-                                        <constraint firstAttribute="trailing" secondItem="XfE-1C-g7F" secondAttribute="trailing" constant="30" id="mCS-NR-x2h"/>
-                                        <constraint firstItem="n4v-31-f6B" firstAttribute="leading" secondItem="0yB-hE-8IF" secondAttribute="leading" id="npz-Oh-qBT"/>
-                                        <constraint firstAttribute="trailing" secondItem="n4v-31-f6B" secondAttribute="trailing" id="qHY-OJ-fUN"/>
-                                        <constraint firstAttribute="bottom" secondItem="n4v-31-f6B" secondAttribute="bottom" constant="20" id="wbQ-At-Pn3"/>
-                                    </constraints>
-                                    <connections>
-                                        <outlet property="avatarImage" destination="XfE-1C-g7F" id="Yln-yo-gNT"/>
-                                        <outlet property="nickLabel" destination="3a1-Su-N0M" id="BBH-NR-yJq"/>
-                                        <outlet property="profileImage" destination="n4v-31-f6B" id="tAJ-rH-35p"/>
-                                    </connections>
-                                </view>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
