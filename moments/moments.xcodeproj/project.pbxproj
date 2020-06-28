@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00031C4324A6DC9A00DF5203 /* MockTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00031C4224A6DC9A00DF5203 /* MockTweets.swift */; };
-		00031C4424A6DC9A00DF5203 /* MockTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00031C4224A6DC9A00DF5203 /* MockTweets.swift */; };
 		00031C4A24A74F4100DF5203 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00031C4824A74F4100DF5203 /* TableViewCell.swift */; };
 		00031C4B24A74F4100DF5203 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00031C4824A74F4100DF5203 /* TableViewCell.swift */; };
 		00031C4C24A74F4100DF5203 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00031C4924A74F4100DF5203 /* TableViewCell.xib */; };
@@ -51,7 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00031C4224A6DC9A00DF5203 /* MockTweets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTweets.swift; sourceTree = "<group>"; };
 		00031C4824A74F4100DF5203 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		00031C4924A74F4100DF5203 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		00031C4E24A7792F00DF5203 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -160,7 +157,6 @@
 			children = (
 				00CDD21324A47B62003F4FF6 /* Tweet.swift */,
 				00CDD21624A59845003F4FF6 /* Profile.swift */,
-				00031C4224A6DC9A00DF5203 /* MockTweets.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,7 +403,6 @@
 				00CDD1E624A0EEE0003F4FF6 /* ViewController.swift in Sources */,
 				00031C4A24A74F4100DF5203 /* TableViewCell.swift in Sources */,
 				00CDD1E224A0EEE0003F4FF6 /* AppDelegate.swift in Sources */,
-				00031C4324A6DC9A00DF5203 /* MockTweets.swift in Sources */,
 				00CDD1E424A0EEE0003F4FF6 /* SceneDelegate.swift in Sources */,
 				00031C5024A7792F00DF5203 /* CollectionViewCell.swift in Sources */,
 			);
@@ -423,7 +418,6 @@
 				00031C5124A7792F00DF5203 /* CollectionViewCell.swift in Sources */,
 				00CDD21824A59845003F4FF6 /* Profile.swift in Sources */,
 				00CDD20E24A47488003F4FF6 /* FetchService.swift in Sources */,
-				00031C4424A6DC9A00DF5203 /* MockTweets.swift in Sources */,
 				00CDD1F924A0EEE3003F4FF6 /* momentsTests.swift in Sources */,
 				00CDD21D24A5D916003F4FF6 /* MomentsViewModel.swift in Sources */,
 			);

@@ -30,15 +30,10 @@ class TableViewCell: UITableViewCell {
         
         self.tweet = tweet
 
-        do {
-            let avatarUrl = URL(string: tweet.sender?.avatar ?? "")!
-            let data = try Data(contentsOf: avatarUrl)
-            self.avatarImage.image = UIImage(data: data)
+        if(tweet.sender?.avatar != nil){
+            FetchService().fetchImage(urlString: tweet.sender!.avatar, imageView: self.avatarImage)
         }
-        catch {
-            print(error)
-        }
-        
+
         self.nickLabel.text = tweet.sender?.nick
         self.contentLabel.text = tweet.content
         self.contentLabel.numberOfLines = 0

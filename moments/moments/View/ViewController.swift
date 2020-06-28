@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     private func getDisPlayTweets() -> [Tweet]{
-        return self.allTweets[0..<2].map { $0 }.reversed()
+        return self.allTweets[0..<5].map { $0 }
     }
     
     private func renderHeader(){
