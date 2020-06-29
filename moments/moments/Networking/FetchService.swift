@@ -10,6 +10,8 @@ import Foundation
 
 import Alamofire
 
+var imageCache:[String:Data] = [:]
+
 class FetchService {
     func fetch<T: Decodable>(url: String, completion: @escaping(T)-> Void){
         AF.request(url).responseDecodable(of: T.self) { (response) in
@@ -20,25 +22,39 @@ class FetchService {
         }
     }
     
-    func fetchImage(urlString: String, imageView: UIImageView) {
-       self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
-    }
-    
 //    func fetchImage(urlString: String, imageView: UIImageView) {
-//        if let dict = UserDefaults.standard.object(forKey: "ImageCache") as? [String: String]{
-//            if let path = dict[urlString] {
-//                if let data = try? Data(contentsOf: URL(fileURLWithPath: path)){
-//                    //print("using image cache")
-//                    let image = UIImage(data: data)
-//                    imageView.image = image
-//                } else {
-//                    self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
-//                }
-//            }
-//        } else {
-//            self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
+//        guard let cacheData = imageCache[urlString] else {
+//           AF.download(urlString).responseData { response in
+//               if let data = response.value {
+//                   if let image = UIImage(data: data){
+//                       imageCache.updateValue(data, forKey: urlString)
+//                       DispatchQueue.main.async {
+//                            imageView.image = image
+//                       }
+//                   }
+//               }
+//           }
+//            return
 //        }
+//        imageView.image = UIImage(data: cacheData)
 //    }
+    
+//    Not sure why UserDefaults way of ImageCache is slow and sometimes have some issues
+    func fetchImage(urlString: String, imageView: UIImageView) {
+        if let dict = UserDefaults.standard.object(forKey: "ImageCache") as? [String: String]{
+            if let path = dict[urlString] {
+                if let data = try? Data(contentsOf: URL(fileURLWithPath: path)){
+                    // print("using image cache")
+                    let image = UIImage(data: data)
+                    imageView.image = image
+                } else {
+                    self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
+                }
+            }
+        } else {
+            self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
+        }
+    }
     
     private func fetchImageFromRemote(urlString: String, imageView: UIImageView){
         AF.download(urlString).responseData { response in

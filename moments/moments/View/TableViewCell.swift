@@ -82,8 +82,9 @@ class TableViewCell: UITableViewCell {
         }
         let numOfItemPerRow: CGFloat = 3
         let height: CGFloat = 80
+        let lineSpacing: CGFloat = 5
+        
         if self.collectionviewFlowLayout == nil {
-            let lineSpacing: CGFloat = 5
             let interItemSpacing: CGFloat = 5
 
             let width = (self.tweetImageColloction.frame.width - (numOfItemPerRow - 1) * interItemSpacing) / numOfItemPerRow
@@ -97,7 +98,8 @@ class TableViewCell: UITableViewCell {
             self.tweetImageColloction.setCollectionViewLayout(collectionviewFlowLayout, animated: true)
         }
         
-        let heightOfCollection = ceil(CGFloat(self.tweetImages.count) / numOfItemPerRow) * height
+        let rowofCollection = ceil(CGFloat(self.tweetImages.count) / numOfItemPerRow)
+        let heightOfCollection = rowofCollection * height + (rowofCollection - 1) * lineSpacing
         tweetImageColloctionHeightConstraint.constant = CGFloat(heightOfCollection)
     }
 }
