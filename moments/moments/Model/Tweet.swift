@@ -16,13 +16,6 @@ import UIKit
     var comments: [TweetComment]?
  }
 
-// public struct Tweet: Decodable {
-//    var content: String?
-//    var images: [TweetImage]?
-//    var sender: TweetSender?
-//    var comments: [TweetComment]?
-// }
-
 public struct TweetImage: Codable {
     var url: String
 }

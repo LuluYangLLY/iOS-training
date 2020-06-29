@@ -25,6 +25,15 @@ class TableViewCell: UITableViewCell {
         tweetImageColloction.dataSource = self
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        avatarImage.image = nil
+        nickLabel.text = nil
+        contentLabel.text = nil
+        tweetCommentLabel.text = nil
+        
+    }
+    
     func configure(with tweet: Tweet) {
         self.tweetImageColloction.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
         
@@ -37,8 +46,13 @@ class TableViewCell: UITableViewCell {
         self.nickLabel.text = tweet.sender?.nick
         self.contentLabel.text = tweet.content
         self.contentLabel.numberOfLines = 0
-        self.tweetImages = tweet.images
 
+        if(tweet.images == nil){
+            self.tweetImages = []
+        }else{
+            self.tweetImages = tweet.images
+        }
+        
         self.tweetCommentLabel.text = self.formatComment()
         self.tweetCommentLabel.numberOfLines = 0
         
@@ -50,7 +64,7 @@ class TableViewCell: UITableViewCell {
         
         var commentStr = "";
         comments.forEach { comment in
-            commentStr.append(" \(comment.sender.nick):  \(comment.content)\n")
+            commentStr.append("\(comment.sender.nick): \(comment.content)\n")
         }
         
         return commentStr
@@ -75,7 +89,6 @@ class TableViewCell: UITableViewCell {
             self.tweetImageColloction.setCollectionViewLayout(collectionviewFlowLayout, animated: true)
         }
     }
-    
 }
 
 extension TableViewCell: UICollectionViewDataSource {

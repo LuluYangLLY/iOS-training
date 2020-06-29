@@ -20,7 +20,4 @@ class TableHeaderView: UIView {
         fetchService.fetchImage(urlString: profile.avatar, imageView: self.avatarImage)
         self.nickLabel.text = profile.nick
     }
-    
-
-    
 }

@@ -23,9 +23,8 @@ class MomentsViewModel {
     
     func fetchMomonts(){
         fetchService.fetch(url: "https://emagrorrim.github.io/mock-api/moments.json"){ (tweets: [Tweet] ) in
-            let filterTweets = tweets.filter { $0.sender != nil }
+            let filterTweets = tweets.filter { $0.content != nil || $0.images != nil }
             self.didUpdateMomonts!(filterTweets)
         }
     }
-    
 }

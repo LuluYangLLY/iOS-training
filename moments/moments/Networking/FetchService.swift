@@ -13,7 +13,6 @@ import Alamofire
 class FetchService {
     func fetch<T: Decodable>(url: String, completion: @escaping(T)-> Void){
         AF.request(url).responseDecodable(of: T.self) { (response) in
-            print(response)
             guard let result = response.value else { return }
             DispatchQueue.main.async {
                 completion(result)
@@ -25,7 +24,7 @@ class FetchService {
         if let dict = UserDefaults.standard.object(forKey: "ImageCache") as? [String: String]{
             if let path = dict[urlString] {
                 if let data = try? Data(contentsOf: URL(fileURLWithPath: path)){
-                    print("using image cache")
+                    //print("using image cache")
                     let image = UIImage(data: data)
                     imageView.image = image
                 } else {
@@ -57,7 +56,7 @@ class FetchService {
         let path = NSTemporaryDirectory().appending(UUID().uuidString)
         let url = URL(fileURLWithPath: path)
         
-        let data = image.jpegData(compressionQuality: 0.8)
+        let data = image.jpegData(compressionQuality: 0.5)
         try? data?.write(to: url)
         var dict = UserDefaults.standard.object(forKey: "ImageCache") as? [String: String]
         if dict == nil {

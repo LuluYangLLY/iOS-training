@@ -15,4 +15,9 @@ class CollectionViewCell: UICollectionViewCell {
         let fetchService = FetchService()
         fetchService.fetchImage(urlString: tweetImage.url, imageView: self.tweetImage)
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        tweetImage.image = nil
+    }
 }
