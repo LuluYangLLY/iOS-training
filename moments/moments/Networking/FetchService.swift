@@ -21,20 +21,24 @@ class FetchService {
     }
     
     func fetchImage(urlString: String, imageView: UIImageView) {
-        if let dict = UserDefaults.standard.object(forKey: "ImageCache") as? [String: String]{
-            if let path = dict[urlString] {
-                if let data = try? Data(contentsOf: URL(fileURLWithPath: path)){
-                    //print("using image cache")
-                    let image = UIImage(data: data)
-                    imageView.image = image
-                } else {
-                    self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
-                }
-            }
-        } else {
-            self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
-        }
+       self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
     }
+    
+//    func fetchImage(urlString: String, imageView: UIImageView) {
+//        if let dict = UserDefaults.standard.object(forKey: "ImageCache") as? [String: String]{
+//            if let path = dict[urlString] {
+//                if let data = try? Data(contentsOf: URL(fileURLWithPath: path)){
+//                    //print("using image cache")
+//                    let image = UIImage(data: data)
+//                    imageView.image = image
+//                } else {
+//                    self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
+//                }
+//            }
+//        } else {
+//            self.fetchImageFromRemote(urlString: urlString, imageView: imageView)
+//        }
+//    }
     
     private func fetchImageFromRemote(urlString: String, imageView: UIImageView){
         AF.download(urlString).responseData { response in

@@ -39,10 +39,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="q7w-L2-BOF">
-                        <rect key="frame" x="60" y="69.5" width="256" height="200"/>
+                        <rect key="frame" x="60" y="69.5" width="256" height="0.0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="200" id="XT4-r8-O5T"/>
+                            <constraint firstAttribute="height" id="fp5-yc-5wu"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Isf-qT-W7t">
                             <size key="itemSize" width="128" height="128"/>
@@ -52,7 +52,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-Ka-T9Z">
-                        <rect key="frame" x="60" y="279.5" width="256" height="150.5"/>
+                        <rect key="frame" x="60" y="79.5" width="256" height="350.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -83,6 +83,7 @@
                 <outlet property="nickLabel" destination="wgJ-N6-MWW" id="5Ss-ZL-OpF"/>
                 <outlet property="tweetCommentLabel" destination="vI4-Ka-T9Z" id="eD3-DB-N51"/>
                 <outlet property="tweetImageColloction" destination="q7w-L2-BOF" id="Vt1-bN-e1A"/>
+                <outlet property="tweetImageColloctionHeightConstraint" destination="fp5-yc-5wu" id="rne-gJ-XN5"/>
             </connections>
             <point key="canvasLocation" x="1628.985507246377" y="189.50892857142856"/>
         </tableViewCell>
