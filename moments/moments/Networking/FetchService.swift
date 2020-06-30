@@ -10,7 +10,7 @@ import Foundation
 
 import Alamofire
 
-var imageCache:[String:Data] = [:]
+//var imageCache:[String:Data] = [:]
 
 class FetchService {
     func fetch<T: Decodable>(url: String, completion: @escaping(T)-> Void){
@@ -22,6 +22,7 @@ class FetchService {
         }
     }
     
+// // Public constant way for imageCache
 //    func fetchImage(urlString: String, imageView: UIImageView) {
 //        guard let cacheData = imageCache[urlString] else {
 //           AF.download(urlString).responseData { response in
@@ -39,7 +40,6 @@ class FetchService {
 //        imageView.image = UIImage(data: cacheData)
 //    }
     
-//    Not sure why UserDefaults way of ImageCache is slow and sometimes have some issues
     func fetchImage(urlString: String, imageView: UIImageView) {
         if let dict = UserDefaults.standard.object(forKey: "ImageCache") as? [String: String]{
             if let path = dict[urlString] {
