@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 300
+        
         self.fetchData()
     }
 
